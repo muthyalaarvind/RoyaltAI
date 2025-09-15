@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Royalty Tracker" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+
+            <lightning-button label="Refresh" onclick={refreshList} class="slds-m-bottom_medium">
+            </lightning-button>
+
+            <lightning-input type="search" label="Search by Royalty Name" onchange={handleSearch}
+                class="slds-m-bottom_medium">
+            </lightning-input>
+
+            <template if:true={filteredRoyalties}>
+                <lightning-datatable key-field="Id" data={filteredRoyalties} columns={columns}
+                    hide-checkbox-column="true">
+                </lightning-datatable>
+            </template>
+
+            <template if:false={filteredRoyalties}>
+                <p>No records found.</p>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

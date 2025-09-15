@@ -1,0 +1,55 @@
+{
+  // Exclude unnecessary files and folders in Explorer
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    ".mule": true
+  },
+
+  // VS Code Theme and Formatting
+  "workbench.colorTheme": "Default High Contrast",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+
+  // Salesforce Apex Java Runtime (MUST point to valid JDK 17+ path)
+  "salesforcedx-vscode-apex.java.home": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.16.8-hotspot",
+
+  // Apex Language Server Behavior
+  "salesforcedx-vscode-apex.advanced.enable-completion-statistics": true,
+  "salesforcedx-vscode-apex.enable-apex-ls-error-to-telemetry": true,
+  "salesforcedx-vscode-apex.enable-semantic-errors": true,
+  "apex.trace.server": "messages",
+  "salesforcedx-vscode-core.retrieve-test-code-coverage": true,
+  "codeAnalyzer.apexGuru.enabled": true,
+
+  // MuleSoft Developer Settings
+  "mule.homeDirectory": "C:\\Users\\arvin\\AnypointCodeBuilder",
+  "mule.controlPlane": "US Cloud",
+
+  // SFDX Editor Associations (optional)
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "**/src/main/mule/**/*.xml": "mulesoft.projectFile.canvas",
+    "{git,gitlens}:/**/src/main/mule/**/*.xml": "default",
+    "**/src/test/munit/**/*.xml": "mulesoft.projectFile.munitCanvas",
+    "{git,gitlens}:/**/src/test/munit/**/*.xml": "default"
+  },
+
+  // ApexLSP custom storage directory via environment variable
+  "terminal.integrated.env.windows": {
+    "APEX_LS_HOME": "C:\\Users\\arvin\\.apexLSP"
+  },
+
+  // Other Preferences
+  "remote.restoreForwardedPorts": false,
+  "git.ignoreMissingGitWarning": true,
+  "workbench.editor.enablePreview": false,
+  "chat.mcp.discovery.enabled": true,
+  "json.schemas": []
+}

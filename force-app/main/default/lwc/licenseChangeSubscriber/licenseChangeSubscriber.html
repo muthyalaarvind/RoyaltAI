@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Live License Changes">
+        <template if:true={licenses}>
+            <template for:each={licenses} for:item="lic">
+                <div key={lic.Id} class="slds-box slds-m-around_x-small">
+                    <p key={license.Id}>{license.Name} - {license.Status__c}</p>
+                    <p><strong>{lic.Name}</strong></p>
+                    <p>Status: {lic.Status__c}</p>
+                    <p>Region: {lic.Region__c}</p>
+                </div>
+            </template>
+        </template>
+
+        <template if:false={licenses}>
+            <p class="slds-p-around_medium">No license records found.</p>
+        </template>
+    </lightning-card>
+</template>

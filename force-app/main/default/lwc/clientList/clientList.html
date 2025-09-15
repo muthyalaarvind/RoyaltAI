@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Client List" icon-name="standard:account">
+        <div class="slds-p-around_medium">
+            <lightning-input type="search" label="Search by Client Name" onchange={handleSearch}
+                class="slds-m-bottom_medium">
+            </lightning-input>
+
+            <template if:true={filteredClients}>
+                <lightning-datatable key-field="Id" data={filteredClients} columns={columns}
+                    hide-checkbox-column="true">
+                </lightning-datatable>
+            </template>
+
+            <template if:false={filteredClients}>
+                <p>No client records found.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

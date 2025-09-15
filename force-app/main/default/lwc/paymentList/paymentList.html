@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Payment Records" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <lightning-input type="search" label="Search by contentRecords Name"
+                onchange={handleSearch}></lightning-input>
+            <template if:true={payments}>
+                <lightning-datatable key-field="Id" data={payments} columns={columns}
+                    hide-checkbox-column="true"></lightning-datatable>
+            </template>
+            <template if:true={error}>
+                <div class="slds-text-color_error">Error loading payments: {error}</div>
+            </template>
+            <template if:true={receipt}>
+                <lightning-card title="Receipt Preview">
+                    <pre>{receipt}</pre>
+                </lightning-card>
+            </template>
+        </div>
+
+
+    </lightning-card>
+</template>

@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Contact List" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <lightning-input type="search" label="Search by contracts Name" onchange={handleSearch}></lightning-input>
+
+            <lightning-datatable key-field="Id" data={filteredContents} columns={columns} hide-checkbox-column="true">
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

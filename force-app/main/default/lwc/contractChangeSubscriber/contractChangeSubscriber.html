@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Contract Updates (Real-time)">
+        <template if:true={contracts}>
+            <template for:each={contracts} for:item="contract">
+                <p key={contract.Id}>
+                    🔄 {contract.Name} – {contract.Status__c}
+                </p>
+            </template>
+        </template>
+        <template if:false={contracts}>
+            <p>No contract data available.</p>
+        </template>
+    </lightning-card>
+</template>
